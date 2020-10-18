@@ -24,7 +24,8 @@ class userStatsCache:
 		retData = json.loads(data.decode("utf-8"))
 		return retData
 
-	def update(self, userID, gameMode, data = None):
+	@staticmethod
+	def update(userID, gameMode, data = None):
 		"""
 		Update cached user stats in redis with new values
 

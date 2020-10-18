@@ -6,7 +6,8 @@ class cacheMiss(Exception):
 	pass
 
 class personalBestCache:
-	def get(self, userID, fileMd5, country=False, friends=False, mods=-1):
+	@staticmethod
+	def get(userID, fileMd5, country=False, friends=False, mods=-1):
 		"""
 		Get cached personal best rank
 
@@ -42,7 +43,8 @@ class personalBestCache:
 			log.debug("personalBestCache miss")
 			return 0
 
-	def set(self, userID, rank, fileMd5, country=False, friends=False, mods=-1):
+	@staticmethod
+	def set(userID, rank, fileMd5, country=False, friends=False, mods=-1):
 		"""
 		Set userID's redis personal best cache
 

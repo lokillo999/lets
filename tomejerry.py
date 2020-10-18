@@ -219,7 +219,8 @@ class Worker:
         if start:
             self.threaded_work()
 
-    def recalc_score(self, score_data: Dict) -> score:
+    @staticmethod
+    def recalc_score(score_data: Dict) -> score:
         """
         Recalculates pp for a score
 
